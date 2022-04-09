@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ 'ci-setup']
+    branches: [ 'ci-setup', 'master']
   pull_request:
     branches:  
       - '**'        # matches every branch
