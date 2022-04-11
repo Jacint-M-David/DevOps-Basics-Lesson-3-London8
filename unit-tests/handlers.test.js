@@ -27,7 +27,7 @@ describe("Test Route Handlers", () => {
 
   test("Hello page responds with a generic appelative if route parameter is not given", () => {
     const res = { send: jest.fn() };
-    const expectedGenericName = "Friend";
+    const expectedGenericName = "person";
 
     sayHelloHandler({ params: {} }, res);
 
