@@ -1,6 +1,13 @@
 const express = require('express')
-const { indexHandler, sayHelloHandler } = require('./routes/handlers')
+const pino = requre("pino");
 
+const { indexHandler, sayHelloHandler } = require('./routes/handlers')
+const logger = pino({
+  "transport": {
+      "target": 'pino-pretty',
+      "options": { "translateTime": true }
+  }
+});
 
 const app = express();
 const port = 3000;
